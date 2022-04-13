@@ -1,22 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=IBM+Plex+Sans+Thai:wght@100&family=Indie+Flower&family=Lobster&family=Lora:ital@1&family=Merriweather:ital,wght@1,300&family=Playfair+Display:ital@1&family=Sriracha&display=swap');
 
+/* กำหนดค่าสีไว้ล่วงหน้า */
 :root{
     --accent : #84CFDF;
     --accHover : #B4E0EA;
     --bark : rgba(139, 154, 184, 0.7);
     --light : #fff;
-    --transition : all 0.3s ease 0s
+    --transition : all 0.3s ease 0s /* Define delay time */
 }
 
+/* all section */
 *{
+    /* Clear margin and padding */
     box-sizing: border-box;
     margin: 0%;
     padding: 0%;
 }
 
 html,body{
-    height: 100%;
-    overflow: auto;
+    height: 100%; /* fixed height */
+    overflow: auto; /* Using scroll */
 }
 
 body{
@@ -24,7 +27,7 @@ body{
     url(pexels-sharon-mccutcheon-1209843.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; /* fixed screen scale */
 }
 
 a, button, p{
@@ -39,11 +42,12 @@ a, button, .logo{
 main{
     height: 100%;
     display: grid;
+    /* กำหนด grid */
     grid-template-columns: minmax(60px ,1fr)repeat(6, minmax(50px, 190px)) minmax(60px, 1fr);
 }
 
 header{
-    grid-column: 1 / span 7;
+    grid-column: 1 / span 7; /* header start 2nd col and other span 7 */
     margin-left: 5%;
 }
 
@@ -53,6 +57,7 @@ nav{
     height: 150px;
 }
 
+/* class */
 .link{
     margin-left: auto;
 }
@@ -60,7 +65,7 @@ nav{
 .link a, .link button{
     font-size: 1.5rem;
     font-weight: 400;
-    transition: var(--transition);
+    transition: var(--transition); /* Action */
 }
 
 .link a{
@@ -68,7 +73,7 @@ nav{
 }
 
 .link a:hover{
-    color: var(--accHover);
+    color: var(--accHover); /* Cursor hover -> change colot */
 }
 
 .button_med{
@@ -122,12 +127,14 @@ nav{
     grid-column: 2 / span 7;
     background-color: yellow;
     margin-top: 5%;
+    /* top right bottom left */
     padding: 30px 0px 0px 20px;
     display: flex;
 }
 
 .feature{
     display: flex;
+    /* top right bottom left */
     margin: 0px 10px 30px 10px;
 }
 
@@ -162,6 +169,7 @@ nav{
     transition: var(--transition);
 }
 
+/* Responsive Website */
 @media only screen and (max-width:1100px){
     .icon img{
         height: 55px;
